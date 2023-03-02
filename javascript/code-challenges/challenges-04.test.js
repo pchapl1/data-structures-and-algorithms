@@ -50,7 +50,7 @@ HINT: Beware... JS default is "Lexical" ordering.
 ------------------------------------------------------------------------------------------------ */
 
 const sortNumbers = (arr) => {
-  return arr.sort((x, y) => x - y)
+  return arr.sort((i, j) => i - j)
 
 };
 
