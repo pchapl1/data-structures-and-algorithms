@@ -25,12 +25,11 @@ let starWarsPeople = [
 ];
 
 const sortStarWarsCharacters = (starWarsArr) => {
-
-  starWarsArr.sort((a, b) => {
-    let newArr =parseInt(a.height) - parseInt(b.height);
-  });
-  return newArr
-};
+  let test = starWarsArr.sort((a, b)=> {
+  return b.height - a.height;
+});
+return test
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -39,7 +38,9 @@ Write a function named removeThree that takes an index and an array. The functio
 ------------------------------------------------------------------------------------------------ */
 
 const removeThree = (idx, arr) => {
-  // Solution code here...
+  let test = arr.splice(idx, 3)
+  console.log(arr)
+  return arr
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -49,7 +50,7 @@ Write a function named joinArray that takes an array and joins all of the elemen
 ------------------------------------------------------------------------------------------------ */
 
 const joinArray = (arr) => {
-  // Solution code here...
+  return arr.join(" ")
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -67,7 +68,10 @@ For example, if the input is 'Welcome', the output will be:
 
 const howMuchPencil = (str) => {
   let result = [];
-  // Solution code here...
+  for (let i = 0; i < str.length; i++) {
+    console.log(str.slice(i))
+    result.push(str.slice(i))
+  }
   return result;
 };
 
@@ -80,7 +84,7 @@ For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 ------------------------------------------------------------------------------------------------ */
 
 const wordsToCharList = (arr) => {
-  // Solution code here...
+  return arr.split("")
 };
 
 
@@ -127,9 +131,16 @@ const gruffaloCrumble = {
 
 const listFoods = (recipe) => {
   let result = [];
-  // Solution code here...
+  recipe.ingredients.forEach(ingredient => {
+    let selectedSpace = ingredient.indexOf(" ", ingredient.indexOf(" ") + 1)
+    let found = ingredient.slice(selectedSpace + 1)
+    result.push(found)
+  })
+
   return result;
 };
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
