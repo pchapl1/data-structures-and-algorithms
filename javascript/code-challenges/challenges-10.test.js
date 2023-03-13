@@ -26,10 +26,17 @@ For example:
 return: 23
 ------------------------------------------------------------------------------------------------ */
 const findMax = (matrix) => {
-  let max = matrix[0][0]
-  for (const i in matrix) {
-    console.log(i)
-  }
+  let max = 0
+
+  matrix.forEach(arr=>{
+    arr.forEach(num => {
+      if (max < num) {
+        max = num
+      }
+    })
+  })
+
+  return max
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -47,7 +54,12 @@ For example:
 return: 35
 ------------------------------------------------------------------------------------------------ */
 const totalSum = (matrix) => {
-  // Solution code here...
+  let sum = 0;
+
+  matrix.forEach(arr => {
+    arr.forEach(num => sum += num)
+  })
+  return sum
 };
 
 
