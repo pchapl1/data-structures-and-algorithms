@@ -182,7 +182,7 @@ const boardCheck = (row1, col1, row2, col2, row3, col3){
   let z = board[row3][col3]
 }
 const detectTicTacToeWin = (board) => {
-  
+  console.log(board)
 };
 
 /* ------------------------------------------------------------------------------------------------
