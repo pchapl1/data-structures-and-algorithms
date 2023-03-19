@@ -136,7 +136,6 @@ const listFoods = (recipe) => {
     let found = ingredient.slice(selectedSpace + 1)
     result.push(found)
   })
-
   return result;
 };
 
