@@ -176,7 +176,7 @@ Here is a sample board:
   ['X', 'O', 'X'],
 ];
 ------------------------------------------------------------------------------------------------ */
-const boardCheck = (row1, col1, row2, col2, row3, col3){
+const boardCheck = (row1, col1, row2, col2, row3, col3)=>{
   let x = board[row1][col1]
   let y = board[row2][col2]
   let z = board[row3][col3]
